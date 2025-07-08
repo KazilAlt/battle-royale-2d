@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  background: #111;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background: url('https://i.imgur.com/kM7BLdU.jpg') no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 0 20px #00f4ff;
+  border: 2px solid #0ff;
+}
+
+#menu {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#333, #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+#menu h1 {
+  color: #fff;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+#menu button {
+  font-size: 24px;
+  padding: 15px 40px;
+  background: #0ff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #0ff;
+}
+
+#menu button:hover {
+  background: #0cc;
+}
