@@ -6,7 +6,6 @@ const keys = {};
 document.addEventListener('keydown', e => keys[e.key] = true);
 document.addEventListener('keyup', e => keys[e.key] = false);
 
-// Sonidos
 const music = new Audio('https://cdn.pixabay.com/audio/2022/03/15/audio_8311d1c651.mp3');
 music.loop = true;
 music.volume = 0.3;
@@ -96,6 +95,18 @@ function drawEnemies() {
 function checkCollisions() {
   bullets.forEach(bullet => {
     enemies.forEach(enemy => {
+      if (enemy.alive &&
+        bullet.x < enemy.x + enemy.size &&
+        bullet.x + 4 > enemy.x &&
+        bullet.y < enemy.y + enemy.size &&
+        bullet.y + 10 > enemy.y) {
+          enemy.alive = false;
+          enemyDeathSound.currentTime = 0;
+          enemyDeathSound.play();
+      }
+    });
+  });
+}
 function moveEnemies() {
   enemies.forEach(e => {
     if (!e.alive) return;
