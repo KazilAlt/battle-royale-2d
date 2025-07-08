@@ -46,25 +46,3 @@ canvas {
 #menu button:hover {
   background: #0cc;
 }
-#menu {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-}
-
-#menu button {
-  font-size: 20px;
-  padding: 15px 40px;
-  background-color: #0ff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
